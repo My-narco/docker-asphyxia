@@ -64,6 +64,9 @@ setup_plugins() {
       log "Custom plugins NOT FOUND; Adding default plugins"
       cp -r "${DEFAULT_PLUGINS_DIR}"/* "${PLUGINS_DIR}"/ || die "Failed to copy default plugins"
   fi
+  # Synology exclusive
+  log "Removing Synology @eaDir folders..."
+  find "${PLUGINS_DIR}" -name '@eaDir' -type d -exec rm -rf {} + 2>/dev/null || true
 }
 
 build_command_args() {

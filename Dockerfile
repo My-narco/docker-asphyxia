@@ -1,6 +1,6 @@
 FROM alpine:latest
-LABEL maintainer=Edgar131
-ENV ASPHYXIA_VERSION=1.50
+LABEL maintainer=Mynarco.
+ENV ASPHYXIA_VERSION=1.60a
 ENV ASPHYXIA_PLUGIN_VERSION=0.5
 WORKDIR /usr/local/share
 COPY bootstrap.sh .

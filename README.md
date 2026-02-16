@@ -1,10 +1,10 @@
 # Asphyxia Docker Image #
 [Asphyxia](https://asphyxia-core.github.io/)
 
-Latest is running 1.50 of [Asphyxia](https://asphyxia-core.github.io/) and 0.5 of the [Official Plugins](https://github.com/asphyxia-core/plugins)
+Latest is running 1.60a of [Asphyxia](https://asphyxia-core.github.io/) and 0.5 of the [Official Plugins](https://github.com/asphyxia-core/plugins)
 
 ## Source ##
-[github](https://github.com/edgar131/docker-asphyxia)
+[github](https://github.com/PMRAZOR/docker-asphyxia)
 
 ## Usage ##
 ```
@@ -56,13 +56,13 @@ ports:
 While the default configuration that Asphyxia generates specifies the binding host as "localhost", I have found that in docker it typically doesn't work unless specified as "**0.0.0.0**".  If you aren't able to access the web GUI after running the container, you should either specify the **ASPHYXIA_BINDING_HOST** environment variable as "**0.0.0.0**" or change the binding host in your custom mounted config.ini as "**0.0.0.0**".
 
 ## Sample docker-compose.yml ##
-[docker-compose.yml](https://github.com/edgar131/docker-asphyxia/blob/master/docker-compose.yml)
+[docker-compose.yml](https://github.com/My-narco/docker-asphyxia/blob/master/docker-compose.yml)
 ```
 version: "3.9"
 
 services:
   asphyxia:
-    image: edgar131/asphyxia:latest
+    image: mynarco/asphyxia:latest
     build: .
     environment:
       - ASPHYXIA_LISTENING_PORT=

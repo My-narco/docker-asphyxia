@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   asphyxia:
-    image: edgar131/asphyxia:latest
+    image: mynarco/asphyxia:latest
     build: .
     environment:
       - ASPHYXIA_LISTENING_PORT=
